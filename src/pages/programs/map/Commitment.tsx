@@ -1,6 +1,6 @@
 
-
 import React from "react";
+import CircleImage from "../../../assets/circle.png";
 
 export const Commitment: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ export const Commitment: React.FC = () => {
         </div>
         <div className="flex items-center  justify-center p-6 mt-8 lg:mr-4 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
           <img
-            src="/circle.png"
+            src={CircleImage}
             alt="Circle"
             className="object-contain rounded-b-[10%] bg-ellipse bg-no-repeat bg-right-top bg-auto object-left-bottom h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             placeholder="blur"

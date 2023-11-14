@@ -1,6 +1,6 @@
 
-
 import React from "react";
+import YoungWomen from "../../../assets/young-woman.png";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ export const HeroSection: React.FC = () => {
       <div className="container flex flex-col justify-center p-2 mx-2 sm:py-2 lg:py-6 lg:flex-row lg:justify-between">
         <div className="flex items-center  justify-center p-6 mt-2 lg:mr-4 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
           <img
-            src="/young-woman.png"
+            src={YoungWomen}
             alt="Young Women"
             className="object-contain rounded-b-[10%] bg-ellipse bg-no-repeat bg-right-top bg-auto object-left-bottom h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             placeholder="blur"

@@ -1,4 +1,5 @@
 import React from "react";
+import DigitalCircle from "../../../assets/digital-circle.png";
 
 const Timeline: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const Timeline: React.FC = () => {
             <div className="order-1 bg-upticklightb10 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <div className="flex items-center w-2/3 justify-center mt-2 lg:mt-0 p-6">
                 <img
-                  src="/digital-circle.png"
+                  src={DigitalCircle}
                   alt="Digital Circle"
                   className="object-contain"
                   placeholder="blur"
