@@ -1,16 +1,23 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { FaPhone } from "react-icons/fa";
+import NavLogo from "../assets/nav-logo.png";
+import { Link  }  from "react-router-dom";
+import PhoneIcon from "../assets/phone-icon.png"
+import MailIcon from "../assets/mail-icon.png";
+import TwitterIcon from "../assets/twitter-icon.png";
+import InstagramIcon from "../assets/instagram-icon.png";
+import LinkedInIcon from "../assets/linkedin-icon.png"
+import FacebookIcon from "../assets/facebook-icon.png";
+import LocationIcon from "../assets/location-icon.png";
 
-const Footer = () => {
+
+const Footer: React.FC = () => {
   return (
     <footer>
       <div className="footer-content">
         <div className="newsletter">
           {" "}
-          <Image
-            src="/nav-logo.png"
+          <img
+            src={NavLogo}
             width={150}
             height={500}
             alt="uptick logo"
@@ -37,19 +44,19 @@ const Footer = () => {
           <h5>Useful Links</h5>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About us</Link>
+              <Link to="/about">About us</Link>
             </li>
             <li>
-              <Link href="/jobs">Jobs</Link>
+              <Link to="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link href="/blogs">Blogs</Link>
+              <Link to="/blogs">Blogs</Link>
             </li>
             <li>
-              <Link href="/support">Support</Link>
+              <Link to="/support">Support</Link>
             </li>
           </ul>
         </div>
@@ -57,20 +64,16 @@ const Footer = () => {
           <h5>Our Programs</h5>
           <ul>
             <li>
-              <Link href="/programs/talent-beginners">
-                Uptick Talent Beginners
-              </Link>
+              <Link to="/programs/beginners">Uptick Talent Beginners</Link>
             </li>
             <li>
-              <Link href="/programs/talent-tech">Uptick Talent Tech</Link>
+              <Link to="/programs/techs">Uptick Talent Tech</Link>
             </li>
             <li>
-              <Link href="/programs/talent-business">
-                Uptick Talent Business
-              </Link>
+              <Link to="/programs/business">Uptick Talent Business</Link>
             </li>
             <li>
-              <Link href="/programs/talent-map">Uptick Talent Map</Link>
+              <Link to="/programs/map">Uptick Talent Map</Link>
             </li>
           </ul>
         </div>
@@ -78,8 +81,8 @@ const Footer = () => {
           <h5>Contact Us</h5>
           <ul>
             <li>
-              <Image
-                src="/phone-icon.png"
+              <img
+                src={PhoneIcon}
                 width={25}
                 height={25}
                 alt="phone icon"
@@ -87,8 +90,8 @@ const Footer = () => {
               <span>+234 9037424764</span>
             </li>
             <li>
-              <Image
-                src="/mail-icon.png"
+              <img
+                src={MailIcon}
                 width={25}
                 height={25}
                 alt="mail icon"
@@ -96,8 +99,8 @@ const Footer = () => {
               <span>hey@upticktalent.africa</span>
             </li>
             <li>
-              <Image
-                src="/location-icon.png"
+              <img
+                src={LocationIcon}
                 width={50}
                 height={50}
                 alt="location icon"
@@ -112,33 +115,33 @@ const Footer = () => {
       <div className="footer-end">
         <h6>Copyright © 2023 Uptick Talent All Rights Reserved</h6>
         <div className="footer-socials">
-          <Link href="uptick-twitter">
-            <Image
-              src="/twitter-icon.png"
+          <Link to="uptick-twitter">
+            <img
+              src={TwitterIcon}
               width={30}
               height={30}
               alt="twitter icon"
             />
           </Link>
-          <Link href="uptick-instagram">
-            <Image
-              src="/instagram-icon.png"
+          <Link to="uptick-instagram">
+            <img
+              src={InstagramIcon}
               width={30}
               height={30}
               alt="instagram icon"
             />
           </Link>
-          <Link href="uptick-linkedin">
-            <Image
-              src="/linkedin-icon.png"
+          <Link to="uptick-linkedin">
+            <img
+              src={LinkedInIcon}
               width={30}
               height={30}
               alt="linkedin icon"
             />
           </Link>
-          <Link href="uptick-facebook">
-            <Image
-              src="/facebook-icon.png"
+          <Link to="uptick-facebook">
+            <img
+              src={FacebookIcon}
               width={30}
               height={30}
               alt="facebook icon"

@@ -1,35 +1,46 @@
-'use client';
 
 import React from "react";
+import Button from "./Button";
 
-export const Hero = () => {
+interface HeroProps {
+  backgroundImage: string;
+  heading: string;
+  paragraph: string;
+  buttonText: string;
+}
+
+const Hero = ({
+  backgroundImage,
+  heading,
+  paragraph,
+  buttonText,
+}: HeroProps) => {
   return (
-    <div className="text-white ">
-      <div className="container flex flex-col justify-center p-2 mx-2 sm:py-2 lg:py-6 lg:flex-row lg:justify-between">
-        <div className="flex flex-col justify-center p-4 text-left  sm:ml-2 lg:ml-16 rounded-sm lg:max-w-2xl xl:max-w-2xl lg:text-left">
-          <h1 className="text-4xl font-bold sm:text-6xl">
-            Accelerating Technology Progress and Opportunities
-          </h1>
-          <p className="mt-2 mb-2 font-normal text-lg sm:mb-12">
-            Uptick Talent fuels critical technology progress by empowering the
-            next generation of tech and business leaders across Africa through
-            innovative solutions and strategic partnerships.
+    <div className="min-h-screen flex relative">
+      <div className="w-full flex relative">
+        <div
+          className="bg-cover bg-right bg-no-repeat absolute inset-0 z-0"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        ></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black"></div>
+      </div>
+      <div className="absolute inset-0 z-10 flex flex-col items-center mt-48 sm:mx-auto md:auto lg:w-3/5 text-center">
+        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold relative">
+          {heading}
+        </h1>
+
+        <div className="w-full text-gray-300 md:pl-16 md:pr-16">
+          <p className="text-base md:text-lg lg:text-xl text-left p-4 m-2">
+            {paragraph}
           </p>
-          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <button className="px-8 py-3 text-lg font-semibold rounded bg-uptickblue10 text-white hover:bg-upticklightb30">
-              Learn More
-            </button>
-          </div>
         </div>
-        <div className="flex items-center  justify-center p-6 mt-8 lg:mr-4 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-          <img
-            src="/HeroImage.png"
-            alt="HeroImage"
-            className="object-contain rounded-b-[10%] bg-ellipse bg-no-repeat bg-right-top bg-auto object-left-bottom h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
-            placeholder="blur"
-          />
+        <div className="mt-4">
+          <Button title={buttonText} />
         </div>
       </div>
     </div>
   );
 };
+
+export default Hero;

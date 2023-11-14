@@ -1,11 +1,12 @@
-"use client";
+
 import React from "react";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-router-dom";
+import Button from "./Button";
+import NavLogo from "../assets/nav-logo.png";
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = () => {
@@ -16,8 +17,8 @@ const NavBar = () => {
     <>
       <nav>
         <div className="logo">
-          <Image
-            src="/nav-logo.png"
+          <img
+            src={NavLogo}
             width={150}
             height={500}
             alt="uptick logo"
@@ -26,24 +27,20 @@ const NavBar = () => {
         <div className="nav-links">
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link href="/programs">Programs</Link>
+              <Link to="/programs">Programs</Link>
             </li>
             <li>
-              <Link href="/about">About us</Link>
+              <Link to="/about">About us</Link>
             </li>
             <li>
-              <Link href="/jobs">Jobs</Link>
+              <Link to="/jobs">Jobs</Link>
             </li>
           </ul>
         </div>
-        <div className="nav-btn">
-          <Link href="/programs">
-            <button>Explore Our Programs</button>
-          </Link>
-        </div>
+        <Button title="Explore Our Programs" />
         {showDropdown ? (
           <FaTimes className="menu-icon" onClick={toggleDropdown} />
         ) : (
@@ -55,20 +52,20 @@ const NavBar = () => {
         <div className="dropdown-menu">
           <ul className="nav-links">
             <li>
-              <Link href="/">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link href="/programs">Programs</Link>
+              <Link to="/programs">Programs</Link>
             </li>
             <li>
-              <Link href="/about">About us</Link>
+              <Link to="/about">About us</Link>
             </li>
             <li>
-              <Link href="/jobs">Jobs</Link>
+              <Link to="/jobs">Jobs</Link>
             </li>
           </ul>
           <div className="nav-btn">
-            <Link href="/programs">
+            <Link to="/programs">
               <button>Explore Our Programs</button>
             </Link>
           </div>

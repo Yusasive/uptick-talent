@@ -1,0 +1,360 @@
+.container {
+  padding: 40px;
+}
+
+.aboutHero {
+  background: #000;
+}
+
+.heroContent,
+.storyContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.heroDescription {
+  width: 80%;
+}
+
+.heroDescription h1,
+.storyDescription h1 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.heroDescription h6,
+.storyDescription h6 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-top: 2rem;
+}
+
+.heroImage {
+  margin-left: 5rem;
+}
+
+.heroImage img:hover {
+  opacity: 0.7;
+}
+
+.storyContent {
+  margin: 8rem 0;
+}
+
+.storyDescription {
+  text-align: right;
+}
+
+.storyImage img {
+  width: 500px;
+  height: 300px;
+}
+
+.values {
+  background: var(--bluebluelightshade-90, #edf2ff);
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.values h2 {
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+.values h6 {
+  color: #000;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-top: 1.5rem;
+}
+
+.values .cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.values .card {
+  border-radius: 16px;
+  border: 1px solid var(--neutral-4, #4d4d4d);
+  background: #1c1c1c;
+  padding: 20px;
+}
+
+.values .card img {
+  margin-bottom: 1rem;
+}
+
+.values .card h2 {
+  color: var(--bluebluelightshade-30, #7ea3ff);
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  text-align: left;
+}
+
+.values .card h6 {
+  color: var(--neutral-8, #b3b3b3);
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.achievements {
+  background: #1c1c1c;
+  overflow: hidden;
+}
+
+.achievements h2 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.achievements h6 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-top: 1rem;
+}
+
+.achievements .cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.achievements .card {
+  border-radius: 16px;
+  border: 1px solid var(--blue-blue-dark-shade-60, #1c3166);
+  background: #1c1c1c;
+  padding: 30px;
+}
+
+.achievements .box {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.achievements .imageCard {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.achievements .card h2 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  margin-top: 0.5rem;
+}
+
+.achievements .card h6 {
+  color: var(--neutral-8, #b3b3b3);
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.journey {
+  background: rgba(17, 17, 17, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.journeyContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.journey .description {
+  padding: 40px;
+}
+
+.journey .description h1 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 2rem 0;
+}
+
+.journey .description h6 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 1.5rem;
+}
+
+.journey .image img {
+  margin-left: 5rem;
+}
+
+/* Tablets and under */
+@media all and (max-width: 768px) {
+  .heroDescription {
+    width: 100%;
+  }
+
+  .heroDescription h1,
+  .storyDescription h1 {
+    font-size: 40px;
+  }
+
+  .storyImage img {
+    height: 200px;
+    margin-top: 3rem;
+  }
+
+  .values .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievements .card {
+    padding: 20px;
+  }
+
+  .achievements .box {
+    height: 40vh;
+  }
+
+  .journey .image img {
+    margin-left: 0;
+    margin-top: 9rem;
+  }
+
+  .journey .description h1 {
+    font-size: 45px;
+  }
+
+  .journey .description h6 {
+    font-size: 12px;
+  }
+}
+
+/* Tablets and under */
+@media all and (max-width: 500px) {
+  .heroContent,
+  .storyContent,
+  .values .cards,
+  .achievements .cards,
+  .journeyContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .heroImage {
+    margin-left: 0;
+  }
+
+  .storyContent {
+    margin: 3rem 0;
+  }
+
+  .storyContent > :first-child {
+    order: 2;
+  }
+
+  .achievements h2 {
+    font-size: 40px;
+  }
+
+  .achievements .card {
+    padding: 10px;
+  }
+
+  .achievements .box {
+    width: 100%;
+  }
+
+  .journey .description h1 {
+    font-size: 40px;
+  }
+
+  .journey .image img {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* Tablets and under */
+@media all and (max-width: 320px) {
+  .heroDescription h1 {
+    font-size: 35px;
+  }
+
+  .heroDescription h6,
+  .storyDescription h6 {
+    font-size: 12px;
+  }
+
+  .values h2 {
+    font-size: 40px;
+  }
+
+  .values h6 {
+    font-size: 12px;
+  }
+
+  .achievements .card h2 {
+    font-size: 15px;
+  }
+
+  .achievements .card h6 {
+    font-size: 12px;
+  }
+
+  .journey .description h1 {
+    font-size: 35px;
+    margin-top: 0;
+  }
+}
